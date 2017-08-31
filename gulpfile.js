@@ -6,6 +6,7 @@ var Comb = require('csscomb');
 var combConfig = require('./.csscomb.json');
 var comb = new Comb(combConfig);
 var cleanCSS = require('gulp-clean-css');
+var kss = require('gulp-kss');
 
 var settings = {
 	src: {
@@ -106,6 +107,15 @@ gulp.task('watchScss', function() {
 
 gulp.task('buildCss', function() {
 	compileScss(true);
+});
+
+gulp.task('styleguide', function () {
+    gulp.src(['scss/**/*.scss'])
+        .pipe(kss({
+            overview: 'scss/styleguide.md'
+           // templateDirectory: 'app/css/styleguide/template'
+        }))
+        .pipe(gulp.dest('styleguide/'));
 });
 
 // CLI Tasks

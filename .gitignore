@@ -51,6 +51,10 @@ sftp-config.json
 *.css.map
 *.css
 
+# Styleguide #
+########
+styleguide/
+
 # NPM #
 #######
 npm-debug.log

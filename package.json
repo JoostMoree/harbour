@@ -22,5 +22,9 @@
     "gulp-util": "^3.0.8",
     "normalize.css": "^5.0.0",
     "reset-css": "^2.2.0"
+  },
+  "devDependencies": {
+    "gulp-kss": "0.0.2",
+    "kss": "^3.0.0-beta.18"
   }
 }
